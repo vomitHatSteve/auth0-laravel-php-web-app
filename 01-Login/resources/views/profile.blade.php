@@ -8,5 +8,7 @@
 @section('content')
     <h1>Profile</h1>
 
-    <pre class="text-left">{{ $user }}</pre>
+    @can('view', \App\User::class)
+        <pre class="text-left">{{ $user }}</pre>
+    @endcan
 @endsection
